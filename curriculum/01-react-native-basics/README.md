@@ -96,20 +96,26 @@ You will be in charge of setting up native components, plugging into X-Code and 
 
 ## Native Modules
 
-**Install the Create Native Module Library** `npm install -g react-native-create-library`
-
-### iOS
-- `react-native-create-library iCal`
-- `cd iCal`
-- `npm install`
-- `cd ..`
-- `npm i iCal`
-
-
-## Device Features
+## Adding Native Device Features via 3rd Party Library
 - [Contacts](https://github.com/joshuapinter/react-native-unified-contacts) `react-native-unified-contacts`
   - Requires an eject so you can dig into security
+  - Requires Security access from the user
+    - info.plist: 	
+      `<key>NSContactsUsageDescription</key>`
+      `<string>To display them in a test app</string>`
+  - Set swift to version 4.1 in Xcode
+  - Add the project to Xcode
   
+- Rolling Your own ...
+
+**Install the Create Native Module Library** `npm install -g react-native-create-library`
+  
+  ### iOS
+  - `react-native-create-library iCal`
+  - `cd iCal`
+  - `npm install`
+  - `cd ..`
+  - `npm i iCal`
   
 
 
